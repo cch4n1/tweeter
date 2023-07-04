@@ -27,18 +27,16 @@ body {
 main {
   width: 90%;
   background-color: #f4f1ec;
+  flex-direction: column;
+  font-family: sans-serif;
+  align-items: center;
+  padding-top: 7vw;
+  padding-bottom: 7vw;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-/* .profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5vw;
- } */
-  
+
 
