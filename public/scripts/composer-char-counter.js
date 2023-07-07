@@ -2,8 +2,10 @@
 
 $(document).ready(function() {
   // --- our code goes here ---
-  console.log('test')
-  $('#tweet-text').on('input', function(event) {
-    console.log('Key pressed: ' + event.key);
+  $('#tweet-text').on('input', function() {
+    var text = $(this).val();
+    var remainingChars = 140 - text.length;
+    $('#counter').text(remainingChars);
+    console.log("Charaters remaining:", remainingChars);
   });
 });
