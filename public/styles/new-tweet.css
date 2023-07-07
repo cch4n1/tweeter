@@ -60,7 +60,7 @@ article {
 }
 
 article:hover {
-  box-shadow: 5px 5px #c6c6c6;
+  box-shadow: 5px 5px #b9bbdd;
   }
 
 article.tweet header {
