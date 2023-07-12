@@ -59,7 +59,7 @@ $tweet.append(html);
 return $tweet;
 }
 
-// loops through json database and plugs each tweet data into createTweetElement function and then appends to #tweet-container
+// Function to loop through json database and plugs each tweet data into createTweetElement function and then appends to #tweet-container
 const renderTweets = function(tweets) {
 
   const $tweetContainer = $('#tweet-container');
@@ -77,4 +77,15 @@ const renderTweets = function(tweets) {
 // call the renderTweets function with the json data
 renderTweets(data);
 
+// Event listener for form submit
+$('#tweet-form').submit(function(event) {
+
+  // Prevent default form submission behaviour
+  event.preventDefault();
+
+
+  
+})
+
+// end of document.ready
 })
