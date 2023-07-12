@@ -48,6 +48,28 @@ const renderTweets = function(tweets) {
   }
 };
 
+
+// Function to load tweets
+const loadTweets = function () {
+  
+  // AJAX GET request 
+  $.ajax({
+    url: '/tweets',
+    method: 'GET',
+    data: 'json',
+    success: function(response) {
+      console.log('Tweets loaded successfully');
+      console.log('Server response:', response);
+      renderTweets(response)
+    },
+    error: function(xhr, status, error) {
+      console.error('Error loading Tweets:', error);
+    }
+  })
+}
+
+loadTweets()
+
 // Event listener for form submit
 $('#tweet-form').submit(function(event) {
 
@@ -66,6 +88,7 @@ $('#tweet-form').submit(function(event) {
       console.log('Form submitted successfully');
       console.log('Data sent: ', formData)
       console.log('Server response:', response);
+      loadTweets();
     },
     error: function(xhr, status, error) {
       console.error('Error submitting form:', error);
@@ -74,27 +97,6 @@ $('#tweet-form').submit(function(event) {
 
   $('#tweet-text').val('');
 })
-
-// Function to load tweets
-const loadTweets = function () {
-
-  // AJAX GET request 
-  $.ajax({
-    url: '/tweets',
-    method: 'GET',
-    data: 'json',
-    success: function(response) {
-      console.log('Tweets loaded successfully');
-      console.log('Server response:', response);
-      renderTweets(response)
-    },
-    error: function(xhr, status, error) {
-      console.error('Error loading Tweets:', error);
-    }
-  })
-}
-
-loadTweets()
 
 // end of document.ready
 })
