@@ -101,6 +101,7 @@ $('#tweet-form').submit(function(event) {
     }
   })
 
+  $('#tweet-text').val('');
 })
 
 // end of document.ready
