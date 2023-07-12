@@ -19,7 +19,7 @@ const html = `
 <p class="message">${tweet.content.text}</p>
 
 <footer>
-  <div class="post-date">${tweet.created_at}</div>
+  <div class="post-date">${timeago.format(tweet.created_at)}</div>
   <div class="icons">
     <a href=#><i class="fa-solid fa-flag fa-2xs"></i></a>
     <a href=#><i class="fa-solid fa-retweet fa-2xs"></i></a>
@@ -44,7 +44,7 @@ const renderTweets = function(tweets) {
   // loop through tweets and attach them to container
   for (const tweet of tweets ) {
     const $tweetElement = createTweetElement(tweet);
-    $tweetContainer.append($tweetElement) 
+    $tweetContainer.prepend($tweetElement) 
   }
 };
 
