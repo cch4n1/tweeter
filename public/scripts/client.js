@@ -6,32 +6,6 @@
 
 $(document).ready(function() { // document ready function
 
-  // Fake data taken from initial-tweets.json
-  const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
 // Function to create tweet article
 const createTweetElement = function(tweet) {
 
@@ -74,9 +48,6 @@ const renderTweets = function(tweets) {
   }
 };
 
-// call the renderTweets function with the json data
-renderTweets(data);
-
 // Event listener for form submit
 $('#tweet-form').submit(function(event) {
 
@@ -103,6 +74,27 @@ $('#tweet-form').submit(function(event) {
 
   $('#tweet-text').val('');
 })
+
+// Function to load tweets
+const loadTweets = function () {
+
+  // AJAX GET request 
+  $.ajax({
+    url: '/tweets',
+    method: 'GET',
+    data: 'json',
+    success: function(response) {
+      console.log('Tweets loaded successfully');
+      console.log('Server response:', response);
+      renderTweets(response)
+    },
+    error: function(xhr, status, error) {
+      console.error('Error loading Tweets:', error);
+    }
+  })
+}
+
+loadTweets()
 
 // end of document.ready
 })
