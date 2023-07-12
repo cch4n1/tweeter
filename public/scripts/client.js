@@ -76,6 +76,19 @@ $('#tweet-form').submit(function(event) {
   // Prevent default form submission behaviour
   event.preventDefault();
 
+  // Data validation checks if tweet is empty or exceeds limit 
+  const tweetText = $('#tweet-text').val().trim();
+
+  if (tweetText === '') {
+    alert('Tweet is empty!')
+    return;
+  }
+
+  if (tweetText.length > 140) {
+    alert('Tweet exceeds character limit!')
+    return;
+  }
+
   // serialize form data
   const formData = $(this).serialize();
 
