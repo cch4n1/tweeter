@@ -83,8 +83,23 @@ $('#tweet-form').submit(function(event) {
   // Prevent default form submission behaviour
   event.preventDefault();
 
+  // serialize form data
+  const formData = $(this).serialize();
 
-  
+  // AJAX POST request 
+  $.ajax({
+    url: '/tweets',
+    method: 'POST',
+    data: formData,
+    success: function(response) {
+      console.log('Form submitted successfully');
+      console.log('Server response:', response);
+    },
+    error: function(xhr, status, error) {
+      console.error('Error submitting form:', error);
+    }
+  })
+
 })
 
 // end of document.ready
