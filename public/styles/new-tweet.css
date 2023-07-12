@@ -38,6 +38,16 @@
   border: 0px;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #304178;
+  color:#bababa;
+  box-shadow: inset 3px 3px 3px #1b2237;
+}
+
 .tweet-footer {
   display: flex;
   flex-direction: row;
