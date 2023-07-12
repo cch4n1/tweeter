@@ -32,12 +32,10 @@ $(document).ready(function() { // document ready function
   }
 ]
 
+// Function to create tweet article
 const createTweetElement = function(tweet) {
-  //create tweet article
 
-const $tweet = $('<article>').addClass('tweet');/* Your code for creating the tweet element */
-//combine it with html
-// ...
+const $tweet = $('<article>').addClass('tweet');
 
 const html = `
 <header>
@@ -61,10 +59,8 @@ $tweet.append(html);
 return $tweet;
 }
 
+// loops through json database and plugs each tweet data into createTweetElement function and then appends to #tweet-container
 const renderTweets = function(tweets) {
-// loops through tweets (json data)
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
 
   const $tweetContainer = $('#tweet-container');
 
