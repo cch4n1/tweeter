@@ -93,6 +93,7 @@ $('#tweet-form').submit(function(event) {
     data: formData,
     success: function(response) {
       console.log('Form submitted successfully');
+      console.log('Data sent: ', formData)
       console.log('Server response:', response);
     },
     error: function(xhr, status, error) {
