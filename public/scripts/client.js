@@ -16,7 +16,7 @@ const html = `
   <div class="name"><img src=${tweet.user.avatars}> ${tweet.user.name}</div>
   <div class="username">${tweet.user.handle}</div>
 </header>
-<p class="message">${tweet.content.text}</p>
+<p class="message">${$('<div>').text(tweet.content.text).html()}</p>
 
 <footer>
   <div class="post-date">${timeago.format(tweet.created_at)}</div>
