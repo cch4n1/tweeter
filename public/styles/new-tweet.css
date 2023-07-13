@@ -11,6 +11,21 @@
   font-size: 24px;
 }
 
+.form-header {
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+.error-message {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e94545; 
+  color: white;
+  font-size: 24px; 
+  padding: 5px;
+}
+
 .form-text {
   /* display: inline-block; */
   width: 100%;
@@ -27,8 +42,8 @@
 }
 
 ::placeholder {
-  color: #545149;
-  font-weight: bold;
+  color: #7e7b72;
+  /* font-weight: bold; */
 }
 
 .button {
