@@ -4,9 +4,23 @@ Tweeter is a simple, single-page Twitter clone.
 
 This project was built using JavaScript, jQuery and AJAX for the front-end, while the back-end was built using Node and Express. HTML and CSS were used to style the desgin elements.
 
-Tweeter Desktop Display
+## Screenshots
 
-Tweeter Mobile Display
+Tweeter Mobile
+
+!["Tweeter Mobile"](https://github.com/cch4n1/tweeter/blob/master/docs/tweeter-mobile.png)
+
+Tweeter Desktop
+
+!["Tweeter Desktop"](https://github.com/cch4n1/tweeter/blob/master/docs/tweeter-desktop.png)
+
+Empty Textbox Error
+
+!["Empty Textbox Error"](https://github.com/cch4n1/tweeter/blob/master/docs/tweeter-empty-error.png)
+
+Textbox Limit Error
+
+!["Textbox Limit Error"](https://github.com/cch4n1/tweeter/blob/master/docs/tweeter-limit-error.png)
 
 ## How to use Tweeter
 
