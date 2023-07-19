@@ -1,14 +1,12 @@
 .profile {
-  height: 480px;
-  width: 100%;
-  margin-top: 120px;
-  padding-top: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(252, 242, 208);
+  background-color: rgb(249, 218, 114);
   background-image: url(http://www.transparenttextures.com/patterns/skulls.png);
+}
+
+.profile-name {
+  font-size: 36px;
+  display: flex;
+  flex-direction: row;
 }
 
 /* .profile-picture {

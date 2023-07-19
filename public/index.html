@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    
+    <!-- Viewport Meta Tag -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -40,45 +43,49 @@
       </div>
     </nav>
 
-    <!-- profile -->
-    <header class="profile">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class="profile-name">
-          <h2>Bruce Wayne</h2>
-      </div>
-  </header>
+    <!-- page-layout class for media queries-->
+    <div class="page-layout">
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-
-      <!-- Tweet Form -->
-      <section class="new-tweet">
-
-        <!-- Error Message -->
-        <div class="error-message" style="display: none;">
-          <i class="fa-solid fa-triangle-exclamation fa-sm"></i>
-          <span class="error-text"></span>
-          <i class="fa-solid fa-triangle-exclamation fa-sm"></i>
-        </div>
-        
-        <h2 class="form-header">Compose Tweet</h2>
-        <form id="tweet-form" class="tweet-form">
-          <textarea class="form-text" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="tweet-footer">
-            <button class="button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">
-              <div id="counter-placeholder">140</div>
-            </output>
+      <!-- profile -->
+        <header class="profile">
+          <div>
+              <img src="/images/profile-hex.png"> 
           </div>
-        </form>
-      </section>
+          <br>
+          <div class="profile-name">
+              <b>Bruce</b>&nbsp;Wayne
+          </div>
+        </header>
 
-      <!-- Tweets -->
-      <section class="tweet-container" id="tweet-container">
-      </section>
-    </main>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+
+        <!-- Tweet Form -->
+        <section class="new-tweet">
+
+          <!-- Error Message -->
+          <div class="error-message" style="display: none;">
+            <i class="fa-solid fa-triangle-exclamation fa-sm"></i>
+            <span class="error-text"></span>
+            <i class="fa-solid fa-triangle-exclamation fa-sm"></i>
+          </div>
+          
+          <h2 class="form-header">Compose Tweet</h2>
+          <form id="tweet-form" class="tweet-form">
+            <textarea class="form-text" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div class="tweet-footer">
+              <button class="button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">
+                <div id="counter-placeholder">140</div>
+              </output>
+            </div>
+          </form>
+        </section>
+
+        <!-- Tweets -->
+        <section class="tweet-container" id="tweet-container">
+        </section>
+      </main>
+    </div> <!-- page-layout class -->
   </body>
 </html>
