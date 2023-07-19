@@ -33,7 +33,7 @@ main {
 
 @media only screen and (max-width: 768px) {
   .profile {
-  height: 480px;
+  height: 400px;
   width: 100%;
   /* margin-top: 120px; */
   padding-top: 160px;
@@ -44,9 +44,16 @@ main {
   align-items: center;
   }
 
+  div .picture {
+    width: 200px;
+    height: 200px;
+  }
+
   .container {
+    width: 90%;
     flex-direction: column;
     justify-content: center;
+    margin: 5vw;
   }
 }
 
@@ -75,9 +82,12 @@ main {
   }
 
   .container {
-    margin-top: 7vh;
+    margin-top: 5vh;
     margin-right: 5vw;
     margin-bottom: 7vh;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

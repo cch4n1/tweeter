@@ -93,7 +93,6 @@ article.tweet header {
   font-size: 22px;
   font-family: 'Source Sans 3';
   font-weight: 300;
-
 }
 
 article.tweet p.message {
@@ -134,4 +133,18 @@ article.tweet footer {
 
 .icons i.fa-heart:hover {
   color: orange;
+}
+
+@media only screen and (max-width: 768px) {
+  article.tweet header .name {
+    font-size: 20px;
+  }
+
+  article.tweet header .username {
+    font-size: 20px;
+  } */
+
+  .form-text {
+    font-size: 20px;
+  }
 }
