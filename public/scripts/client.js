@@ -104,7 +104,9 @@ $('#tweet-form').submit(function(event) {
     method: 'POST',
     data: formData,
     success: function(response) {
+      // Form submitted successfully, load tweets and rest counter
       loadTweets();
+      $('#counter-placeholder').text('140'); // Reset character counter
     },
     error: function(xhr, status, error) {
       console.error('Error submitting form:', error);
