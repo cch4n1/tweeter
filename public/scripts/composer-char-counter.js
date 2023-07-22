@@ -8,7 +8,6 @@ $(document).ready(function() {
     const text = $(this).val();
     const remainingChars = 140 - text.length;
     $('#counter').text(remainingChars);
-    console.log("Charaters remaining:", remainingChars);
     counter.text(remainingChars);
 
     if (remainingChars < 0) {

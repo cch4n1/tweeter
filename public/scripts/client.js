@@ -60,8 +60,6 @@ const loadTweets = function () {
     method: 'GET',
     data: 'json',
     success: function(response) {
-      console.log('Tweets loaded successfully');
-      console.log('Server response:', response);
       renderTweets(response)
     },
     error: function(xhr, status, error) {
@@ -106,9 +104,6 @@ $('#tweet-form').submit(function(event) {
     method: 'POST',
     data: formData,
     success: function(response) {
-      console.log('Form submitted successfully');
-      console.log('Data sent: ', formData)
-      console.log('Server response:', response);
       loadTweets();
     },
     error: function(xhr, status, error) {
